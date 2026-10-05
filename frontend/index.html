@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="encabezado">
+            <h1>Tecnológico de Antioquia - Institución Universitaria</h1>
+            <h2>Mi primer formulario</h2>
+        </div>
+
+        <form class="formulario">
+
+            <label for="tipoDocumento">Tipo de documento</label>
+            <select id="tipoDocumento" name="tipoDocumento">
+                <option value="">Seleccione...</option>
+                <option value="cedula">Cédula de ciudadanía</option>
+                <option value="tarjeta">Tarjeta de identidad</option>
+                <option value="extranjera">Identificación extranjera</option>
+            </select>
+
+            <label for="documento">Número de documento</label>
+            <input
+                type="text"
+                id="documento"
+                name="documento"
+                inputmode="numeric"
+                pattern="[0-9]+"
+                required>
+
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" required>
+
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion">
+
+            <label for="ciudad">Ciudad</label>
+            <select id="ciudad" name="ciudad">
+                <option value="">Seleccione...</option>
+                <option value="medellin">Medellín</option>
+                <option value="bogota">Bogotá</option>
+                <option value="cali">Cali</option>
+                <option value="barranquilla">Barranquilla</option>
+                <option value="cartagena">Cartagena</option>
+            </select>
+
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo">
+
+            <div class="botones">
+                <button type="submit">Guardar</button>
+                <button type="button" id="btnActualizar">Actualizar</button>
+                <button type="button" id="btnEliminar">Eliminar</button>
+            </div>
+
+        </form>
+
+        <table id="tablaPersonas">
+
+            <thead>
+                <tr>
+                    <th>Tipo Documento</th>
+                    <th>Número de Documento</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Dirección</th>
+                    <th>Ciudad</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaDatos">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
